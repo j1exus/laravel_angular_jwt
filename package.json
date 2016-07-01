@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "gulp-concat": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-filter": "latest",
+    "gulp-ng-annotate": "latest",
+    "gulp-notify": "latest",
+    "gulp-uglify": "latest",
+    "laravel-elixir": "latest",
+    "main-bower-files": "latest"
+  },
+  "devDependencies": {
+    "gulp": "latest"
+  }
+}

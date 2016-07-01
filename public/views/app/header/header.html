@@ -1,0 +1,17 @@
+<md-toolbar layout="row" ng-controller="HeaderController">
+    <div class="md-toolbar-tools">
+        <h3>You text</h3>
+        <span flex></span>
+        <md-menu md-offset="0 65">
+            <md-button aria-label="More" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
+                <md-icon md-menu-origin aria-label="More" md-svg-icon="img/icons/more_vert.svg"></md-icon>
+            </md-button>
+            <md-menu-content width="3">
+                <md-menu-divider></md-menu-divider>
+                <md-menu-item>
+                    <md-button ng-click="logout()">Log Out</md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </div>
+</md-toolbar>

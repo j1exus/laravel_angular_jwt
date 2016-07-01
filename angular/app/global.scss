@@ -1,0 +1,38 @@
+//colors
+.md-cs-warn {
+  color: #ef5350;
+}
+
+//aligment
+.md-cs-align-center {
+  text-align: center;
+}
+
+.md-cs-link {
+  color: #2196f3;
+}
+
+.error {
+  p {
+    color: #d50000;
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+.auth_pages {
+  max-width: 250px !important;
+  img {
+    margin: 30px 0px;
+  }
+  md-input-container {
+    width: 100%;
+  }
+  .forgot {
+    margin-top: 20px;
+    a {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+}

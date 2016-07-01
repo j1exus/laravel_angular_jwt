@@ -1,0 +1,45 @@
+<div layout="row" layout-align="center center" ng-controller="RegisterController">
+    <div class="auth_pages" class="login" layout="column" flex="20" layout-align="center center">
+        <img src="http://placehold.it/150x150" alt="logo">
+        <form name="registerForm" layout="column" layout-fill>
+            <md-input-container>
+                <label>Name</label>
+                <input required name="name" ng-model="newUser.name">
+                <div ng-messages="registerForm.name.$error">
+                    <div ng-message="required">Name is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>Email</label>
+                <input type="email" name="email" required ng-model="newUser.email" ng-pattern="/^.+@.+\..+$/">
+                <div ng-messages="registerForm.email.$error" role="alert">
+                    <div ng-message-exp="['required', 'pattern']">
+                        Email is required.
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input ng-model="newUser.password" type="password" name="password" required ng-minlength="8">
+                <div ng-messages="registerForm.password.$error">
+                    <div ng-message="required">Password is required.</div>
+                    <div ng-message="minlength">Password length should be at least 8 characters.</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>Password (repeat)</label>
+                <input ng-model="newUser.passwordConfirm" type="password" name="passwordConfirm" required
+                       ng-pattern="newUser.password">
+                <div ng-messages="registerForm.passwordConfirm.$error">
+                    <div ng-message="required">Password confirmation is required.</div>
+                    <div ng-message="pattern">Password confirmation doesn't match Password.</div>
+                </div>
+            </md-input-container>
+            <md-button class="md-raised md-primary" ng-click="register()" ng-disabled="registerForm.$invalid">Register
+            </md-button>
+        </form>
+        <div class="error" layout="row" layout-fill>
+            <p>{{error}}</p>
+        </div>
+    </div>
+</div>

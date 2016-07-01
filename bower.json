@@ -1,0 +1,15 @@
+{
+  "name": "jwt_auth_app",
+  "version": "0.1",
+  "description": "simple jwt auth app",
+  "authors": [
+    "Alexey Aksutik"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "satellizer": "latest",
+    "angular-ui-router": "latest",
+    "angular-material": "latest",
+    "restangular": "latest"
+  }
+}

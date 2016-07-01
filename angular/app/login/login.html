@@ -1,0 +1,33 @@
+<div layout="row" layout-align="center center" ng-controller="AuthController">
+    <div class="auth_pages" layout="column" flex="20" layout-align="center center">
+        <img src="http://placehold.it/150x150" alt="logo">
+        <form name="loginForm" layout="column" layout-align="center center" layout-fill>
+            <md-input-container>
+                <label>Email</label>
+                <input required ng-pattern="/^.+@.+\..+$/" ng-model="user.email" name="email">
+                <div ng-messages="loginForm.email.$error" role="alert">
+                    <div ng-message-exp="['required', 'pattern']">
+                        Email is required.
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input required ng-model="user.password" type="password" name="password">
+                <div ng-messages="loginForm.password.$error" role="alert">
+                    <div ng-message-exp="['required', 'pattern']">
+                        Password is required.
+                    </div>
+                </div>
+            </md-input-container>
+            <md-button class="md-raised md-primary" ng-click="login()" ng-disabled="loginForm.$invalid">Log In
+            </md-button>
+        </form>
+        <div class="forgot" layout="row" layout-fill>
+            <a ui-sref="passwordrestore" class="md-cs-link">Forgot password?</a>
+        </div>
+        <div class="error" layout="row" layout-fill>
+            <p>{{error}}</p>
+        </div>
+    </div>
+</div>

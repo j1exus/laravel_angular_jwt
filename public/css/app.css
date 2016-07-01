@@ -1,0 +1,27 @@
+.md-cs-warn {
+  color: #ef5350; }
+
+.md-cs-align-center {
+  text-align: center; }
+
+.md-cs-link {
+  color: #2196f3; }
+
+.error p {
+  color: #d50000;
+  font-size: 14px;
+  text-align: left; }
+
+.auth_pages {
+  max-width: 250px !important; }
+  .auth_pages img {
+    margin: 30px 0px; }
+  .auth_pages md-input-container {
+    width: 100%; }
+  .auth_pages .forgot {
+    margin-top: 20px; }
+    .auth_pages .forgot a {
+      font-size: 14px;
+      text-align: left; }
+
+/*# sourceMappingURL=app.css.map */
